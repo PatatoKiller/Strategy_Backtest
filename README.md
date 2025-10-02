@@ -37,3 +37,22 @@ Clone the repository:
 git clone https://github.com/PatatoKiller/Strategy_Backtest.git
 cd Strategy_Backtest
 pip install -r requirements.txt
+
+---
+
+## Project Structure
+
+```text
+.
+├── models/
+│   ├── Strategy.py            # Abstract base class
+│   ├── Portfolio.py           # Portfolio and trade tracking
+│   ├── ExecutionPolicy.py     # Execution logic
+│   ├── Backtest.py            # Backtest orchestration
+│   ├── Strategy8.py           # Example strategies (8.1, 8.2)
+│   └── ...
+├── notebooks/                 # Example Jupyter notebooks
+├── data/                      # Sample datasets
+├── tests/                     # Unit tests
+├── requirements.txt
+└── README.md
