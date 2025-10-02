@@ -37,7 +37,7 @@ Clone the repository:
 git clone https://github.com/PatatoKiller/Strategy_Backtest.git
 cd Strategy_Backtest
 pip install -r requirements.txt
-
+```
 ---
 
 ## Project Structure
