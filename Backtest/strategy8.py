@@ -54,8 +54,12 @@ class Strategy8_1(_S8Base):
         x = self._prep(df)
         sig = (x["ret"] < 0) & (x["ret"] < -x["q_abs"])
         entry = sig
-        exit = sig.shift(self._shift_periods, fill_value=0)
-        #exit = pd.Series(False, index=df.index)
+        # exit = sig.shift(self._shift_periods, fill_value=0)
+        # extend holding if already long
+        # so we dont need to set the event exit signal here
+        # the extend mode will handle it 
+        # as long as we set the fixed holding period
+        exit = pd.Series(False, index=df.index)
         side = sig.astype(float).fillna(0.0)
         sig = pd.DataFrame({
             "entry": entry.astype(float).fillna(0.0),

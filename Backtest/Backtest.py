@@ -225,7 +225,6 @@ class Backtester:
     def plot_drawdown(self, results: RunResult, method: str = "compound"):
         ledger = results["ledger"]
         figsize = (10,5)
-        plt.figure(figsize=(10,5))
         if method == "additive":
             if "equity_additive" not in ledger.columns:
                 raise KeyError("ledger missing 'equity_additive'")
